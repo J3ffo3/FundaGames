@@ -1,0 +1,7 @@
+﻿  MainGame.cpp
+C:\Users\jeffd\Pictures\UPC\CICLO 6\Funda Games\TA02\Motor\Motor\MainGame.cpp(57,15): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Users\jeffd\Pictures\UPC\CICLO 6\Funda Games\TA02\Motor\Motor\MainGame.cpp(96,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jeffd\Pictures\UPC\CICLO 6\Funda Games\TA02\Motor\Motor\MainGame.cpp(97,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jeffd\Pictures\UPC\CICLO 6\Funda Games\TA02\Motor\Motor\MainGame.cpp(98,20): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jeffd\Pictures\UPC\CICLO 6\Funda Games\TA02\Motor\Motor\MainGame.cpp(99,21): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  Motor.vcxproj -> C:\Users\jeffd\Pictures\UPC\CICLO 6\Funda Games\TA02\Motor\x64\Debug\Motor.exe
