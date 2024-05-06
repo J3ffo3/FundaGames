@@ -63,7 +63,7 @@ void MainGame::draw()
 void MainGame::update()
 {
 	static int frameCount = 0;
-	static const int FRAME_INTERVAL = 4600; // Ajusta este valor según la velocidad deseada
+	static const int FRAME_INTERVAL = 4650; // Ajusta este valor según la velocidad deseada
 	// Bucle principal del juego
 	while (gameState != GameState::EXIT) {
 		draw();
@@ -71,7 +71,7 @@ void MainGame::update()
 		frameCount++;
 		if (frameCount == FRAME_INTERVAL) {
 			frameCount = 0;
-			// Agrega un nuevo sprite aleatorio a la ventana
+			// Agrega un nuevo sprite en un lugar aleatorio a la ventana
 			addRandomSprite();
 		}
 	}
