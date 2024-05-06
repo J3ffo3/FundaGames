@@ -4,17 +4,18 @@
 #include <iostream>
 #include "Sprite.h"
 #include "GLS_Program.h"
+#include <vector>
 using namespace std;
 
 enum class GameState {
 
 	PLAY, EXIT
-
 };
 
 class MainGame {
 
 private:
+	vector<Sprite> sprites; // Vector para almacenar varios sprites(rectangulos)
 	Sprite sprite;
 	int width;
 	int height;
@@ -31,6 +32,6 @@ public:
 	void run();
 	void draw();
 	void update();
-
+	void addRandomSprite(); //Agregar un rectangulo en una posición aleatoria cada cierto tiempo
 
 };

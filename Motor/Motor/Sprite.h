@@ -11,7 +11,7 @@ private:
 public:
 	Sprite();
 	~Sprite();
-	void init(float x, float y, int width, int height);
+	void init(float x, float y, float width, float height);
 	void draw();
 };
 	
