@@ -105,10 +105,6 @@ void MainGame::initLevel() {
 	player = new Player();
 	player->init(2.5f,levels[currentLevel]->getPlayerPosition(), 
 		&inputManager);
-	
-	// Guardamos la posición del jugador en una variable temporal
-	glm::vec2 playerPos = player->getPlayerPosition();
-
 
 	std::mt19937 randomEngie(time(nullptr));
 	std::uniform_int_distribution<int>randPosX(
@@ -127,7 +123,7 @@ void MainGame::initLevel() {
 	
 	for (int i = 0; i < levels[currentLevel]->getZombiesPosition().size(); i++)
 	{
-		zombies.push_back(new Zombie()); // Pasamos la referencia al constructor
+		zombies.push_back(new Zombie());
 		zombies.back()->init(1.0f, levels[currentLevel]->getZombiesPosition()[i]);
 	}
 	
