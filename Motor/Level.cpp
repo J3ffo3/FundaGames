@@ -58,7 +58,7 @@ void Level::parseLevel()
 				break;
 			case 'Z':
 				levelData[y][x] = '.';
-				zombies.push_back(glm::vec2(x * TILE_WIDTH, y * TILE_WIDTH));
+				zombiesP.push_back(glm::vec2(x * TILE_WIDTH, y * TILE_WIDTH));
 				break;
 			case '.':
 				break;

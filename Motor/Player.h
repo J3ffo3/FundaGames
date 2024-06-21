@@ -14,5 +14,8 @@ public:
     void update(vector<string>& levelData,
         vector<Human*>& humans,
         vector<Zombie*>& zombies);
+    glm::vec2 getPlayerPosition() {
+        return position;
+    }
 };
 

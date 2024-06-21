@@ -103,8 +103,13 @@ void MainGame::initLevel() {
 	currentLevel = 0;
 	spriteBatch.init();
 	player = new Player();
-	player->init(0.5f,levels[currentLevel]->getPlayerPosition(), 
+	player->init(2.5f,levels[currentLevel]->getPlayerPosition(), 
 		&inputManager);
+	
+	// Guardamos la posición del jugador en una variable temporal
+	glm::vec2 playerPos = player->getPlayerPosition();
+
+
 	std::mt19937 randomEngie(time(nullptr));
 	std::uniform_int_distribution<int>randPosX(
 		1,levels[currentLevel]->getWidth() - 2
@@ -119,6 +124,13 @@ void MainGame::initLevel() {
 			randPosY(randomEngie) * TILE_WIDTH);
 		humans.back()->init(1.0f, pos);
 	}
+	
+	for (int i = 0; i < levels[currentLevel]->getZombiesPosition().size(); i++)
+	{
+		zombies.push_back(new Zombie()); // Pasamos la referencia al constructor
+		zombies.back()->init(1.0f, levels[currentLevel]->getZombiesPosition()[i]);
+	}
+	
 }
 
 void MainGame::draw() {
@@ -135,10 +147,15 @@ void MainGame::draw() {
 	spriteBatch.begin();
 	levels[currentLevel]->draw();
 	player->draw(spriteBatch);
+	for (size_t i = 0; i < zombies.size(); i++)
+	{
+		zombies[i]->draw(spriteBatch);
+	}
 	for (size_t i = 0; i < humans.size(); i++)
 	{
 		humans[i]->draw(spriteBatch);
 	}
+	
 	spriteBatch.end();
 	spriteBatch.renderBatch();
 	drawHud();
@@ -173,6 +190,11 @@ void MainGame::update() {
 		{
 			humans[i]->update(levels[currentLevel]->getLevelData(), 
 				humans, zombies);
+		}
+		for (size_t i = 0; i < zombies.size(); i++)
+		{
+			zombies[i]->update(levels[currentLevel]->getLevelData(),
+				humans, zombies, player);
 		}
 	}
 }
