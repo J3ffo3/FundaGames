@@ -1,6 +1,6 @@
 # TF - Informe de Implementaciones
 
-## ALUMNO
+## ALUMNOS
 
 | CÓDIGO     | NOMBRES Y APELLIDOS                      |
 |------------|------------------------------------------|
