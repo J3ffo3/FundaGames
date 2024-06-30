@@ -24,3 +24,8 @@ Luis Alberto Valdivia Humareda
 
 3. **Mejora de las clases Player, Human, Zombie**
    - Se inicializaron y configuraron las variables para el funcionamiento de las animaciones de cada clase.
+  
+## Video de ejecución
+
+![ZombieGame](https://github.com/J3ffo3/FundaGames/assets/117779481/c5c74901-2fb2-4e2f-b0be-298868c0c5b8)
+
